@@ -23,14 +23,22 @@ class Book {
 let myLibrary = [];
 let newBook;
 
+const dataTitle = document.querySelector('[data-input1]');
+const dataAuthor = document.querySelector('[data-input2]');
+const dataPages = document.querySelector('[data-input3]');
+const myForm = document.getElementById('my-form');
+
 function addBookToLibrary() {
   event.preventDefault();
-  popUpForm.style.display = 'none';
-
-  newBook = new Book(title, author, pages, read); 
-  myLibrary.push(newBook); 
-  render(); 
-  form.reset();
+  if (myForm.checkValidity()) {
+    popUpForm.style.display = 'none';
+    newBook = new Book(title, author, pages, read); 
+    myLibrary.push(newBook); 
+    render();
+    myForm.reset();
+  } else {
+    alert('Please fill in all three fields');
+  }
 }
 
 //Creates book visual in browser
@@ -81,8 +89,6 @@ function createBook(item) {
     readBtn.style.backgroundColor = '#9fff9c';
     bookDiv.style.backgroundImage = 'linear-gradient(to bottom right, whitesmoke, #52747D)';
   }
-
-
 
   removeBtn.textContent = 'Remove'; 
 

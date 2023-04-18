@@ -12,16 +12,17 @@
     <button id="newBtn">+ Add a book</button>
   </div>
   <div id="popup-form">
-    <form id="form" action="">
+    <form id="my-form">
       <span class="close">&times;</span>
-      <input type="text" id="title" name="title" placeholder="Title" required>
-      <input type="text" id="author" name="author" placeholder="Author" required>
-      <input type="text" id="pages" name="page" placeholder="Pages" required>
+      <input type="text" data-input1 id="title" name="title" placeholder="Title" required>
+      <input type="text" data-input2 id="author" name="author" placeholder="Author" required>
+      <input type="number" data-input3 id="pages" name="page" placeholder="Pages" required>
       <div id="checkbox">
         <label for="read">Read: </label>
         <input type="checkbox" id="read" name="read" value="yes">
       </div>
       <button class="form-button" id="addBtn">Add</button>
+      <p id="demo"></p>
     </form>
   </div>
 
