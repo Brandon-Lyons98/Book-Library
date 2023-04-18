@@ -23,9 +23,6 @@ class Book {
 let myLibrary = [];
 let newBook;
 
-const dataTitle = document.querySelector('[data-input1]');
-const dataAuthor = document.querySelector('[data-input2]');
-const dataPages = document.querySelector('[data-input3]');
 const myForm = document.getElementById('my-form');
 
 function addBookToLibrary() {
